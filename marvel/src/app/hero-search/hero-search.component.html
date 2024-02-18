@@ -1,0 +1,13 @@
+<div id="search-component" class="flex justify-center">
+  <div class="mt-10 mb-10">
+    <div class="flex items-center border-b-2 border-blue-900 h-12">
+      <span class="pl-4 pr-2 py-1">Character Search:</span>
+      <input #searchBox id="search-box" (input)="search(searchBox.value)" class="w-full sm:w-64 md:w-80 lg:w-96 xl:w-120 border-none rounded-lg focus:outline-none bg-transparent"/>
+    </div>
+    <ul class="search-result bg-zinc-200">
+      <li *ngFor="let hero of heroes$ | async">
+        <a routerLink="/detail/{{hero.id}}" class="p-8">{{hero.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

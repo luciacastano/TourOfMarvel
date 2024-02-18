@@ -1,0 +1,19 @@
+<body>
+  <h2 class="mt-10 ml-16 font-bold w-24">Characters</h2>
+
+  <div *ngFor="let hero of heroes" class="ml-16 pt-3 font-bold">
+    <div routerLink="/detail/{{hero.id}}" class="flex cursor-pointer">
+      <div class="bg-blue-900 text-white py-1 rounded-l w-20 flex justify-center items-center">{{ hero.id }}</div>
+      <div class="bg-zinc-200 px-2 py-1 rounded-r w-96">{{ hero.name }}</div>
+    </div>
+  </div>
+</body>
+
+<div class="flex items-center justify-center">
+    <div class="px-6 py-4 my-3 w-3/4 mx-auto flex items-center">
+      <div class="w-full text-center mx-auto">
+        <button type="button" (click)="back()" class="bg-zinc-200 hover:bg-blue-900 hover:text-white rounded-md px-4 py-2 m-2">Back</button>
+        <button type="button" (click)="next()" class="bg-zinc-200 hover:bg-blue-900 hover:text-white rounded-md px-4 py-2 m-2">Next</button>
+      </div>
+    </div>  
+</div>

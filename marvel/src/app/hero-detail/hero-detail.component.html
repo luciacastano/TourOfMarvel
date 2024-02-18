@@ -1,0 +1,33 @@
+<div *ngFor="let hero of heroes" class="text-center justify-center">
+  <h2 class="font-bold text-white mt-7 text-3xl bg-blue-900 pt-4 pb-4 ml-96 mr-96">
+    Details of {{hero.name | uppercase}}
+  </h2>
+    
+  <div class="font-light text-zinc-500 text-xl mt-6">
+    <p>id: {{hero.id}}</p>
+  </div>
+
+  <div class="text-center justify-center font-light text-zinc-500 text-xl">
+    <p>Character Name: {{hero.name}}</p>
+  </div>
+
+  <div class="text-center justify-center font-light text-zinc-500 text-xl mb-4">
+    <p>Number of comics available: {{hero.comics.available}}</p>
+  </div>
+
+  <div class="flex items-center justify-center">
+    <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}">
+  </div>
+</div>
+
+<footer>
+  <div class="flex items-center justify-center">
+    <div class="bg-white px-6 py-4 my-3 w-3/4 mx-autoflex items-center">
+      <div class="w-full text-center mx-auto">
+        <button type="button" (click)="goBack()" class="bg-gray-200 rounded px-4 py-2 m-2 hover:text-white hover:bg-blue-900">
+          Go Back
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>

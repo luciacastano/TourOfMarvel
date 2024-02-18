@@ -1,0 +1,19 @@
+<body>
+  <h1 class="pt-10 ml-14 text-2xl text-blue-900">Tour of Marvel By Lucía</h1>
+  <nav class="px-2 sm:px-4 py-2.5 h-20">
+    <div>
+      <div>
+        <ul class="flex flex-col mt-4 ml-10 border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+          <li>
+            <a routerLink="/dashboard" class="block py-4 px-6 bg-gray-200 rounded hover:bg-blue-900 hover:text-white">Dashboard</a>
+          </li>
+          <li>
+            <a routerLink="/heroes" class="block py-4 px-6 bg-gray-200 rounded hover:bg-blue-900 hover:text-white">Characters</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</body>
