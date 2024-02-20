@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map, switchMap } from 'rxjs/operators';
 import { Results } from '../interface/hero';
 import { HeroService } from '../service/hero.service';
@@ -23,15 +23,15 @@ export class HeroSearchComponent implements OnInit {
     this.heroes$ = this.searchTerms.pipe(
       debounceTime(300),
       distinctUntilChanged(),
-      filter((term: string) => term.trim() !== ''),
       switchMap((term: string) => {
         if (term.trim() === '') {
-          return [];
+          return of([]);
         } else {
-          return this.heroService.getSearchHeroes(term);
+          return this.heroService.getSearchHeroes(term).pipe(
+            map((heroes: Results[]) => heroes.slice(0, 5))
+          );
         }
-      }),
-      map((heroes: Results[]) => heroes.slice(0, 5))
+      })
     );
   }
 }
