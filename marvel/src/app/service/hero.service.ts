@@ -25,7 +25,7 @@ export class HeroService {
   }
 
   public getRandomHeroes(limit: number): Observable<Results[]> {
-    return this.http.get<Hero>(this.heroesUrl + this.alcachofa + "&offset=" + Math.floor(Math.random() * 1562) + '&limit=' + limit)
+    return this.http.get<Hero>(this.heroesUrl + this.alcachofa + "&offset=" + Math.floor(Math.random() * 1564) + '&limit=' + limit)
       .pipe(map((result: Hero) => result.data.results))
   }
 

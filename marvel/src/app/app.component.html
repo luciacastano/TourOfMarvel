@@ -1,6 +1,6 @@
 <body>
   <h1 class="pt-10 ml-14 text-2xl text-blue-900">Tour of Marvel By Lucía</h1>
-  <nav class="px-2 sm:px-4 py-2.5 h-20">
+  <!--<nav class="px-2 sm:px-4 py-2.5 h-20">
     <div>
       <div>
         <ul class="flex flex-col mt-4 ml-10 border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
@@ -13,7 +13,15 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav>-->
+
+
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button routerLink="/dashboard" class="dashboard">Dashboard</button>
+      <button mat-raised-button routerLink="/heroes" class="characters">Characters</button>
+    </div>
+  </section>
 
   <router-outlet></router-outlet>
 </body>

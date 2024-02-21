@@ -1,6 +1,6 @@
 export interface Hero {
   data: {
-    total: number;
+    /*total: number;*/
     results: Results[];
   }
 }

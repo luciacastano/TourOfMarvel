@@ -3,12 +3,12 @@
 <h2 class="text-xl text-center mt-8 mb-8">Top Characters</h2>
 
 <div class="flex flex-wrap justify-center">
-  <a routerLink="/detail/{{hero.id}}" *ngFor="let hero of heroes" class="text-center inline-grid p-10 hover:bg-blue-900">
+  <mat-card routerLink="/detail/{{hero.id}}" *ngFor="let hero of heroes" class="text-center inline-grid p-10 hover:bg-blue-900 cursor-pointer">
     <div class="bg-stone-300 text-zinc-600 text-base font-semibold"> 
       {{hero.name}}
     </div>
     <div>
       <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}" alt="{{hero.name}}" class="w-80 h-80">
     </div>
-  </a>
+  </mat-card>
 </div>
